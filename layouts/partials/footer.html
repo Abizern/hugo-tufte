@@ -15,6 +15,14 @@
 
 <ul class="page-footer-menu">
   {{/* SOCIALS */}}
+  {{ if isset .Site.Params "bluesky" }}
+  <li><a href="https://bsky.app/profile/{{.Site.Params.bluesky}}">Bluesky</a></li>
+  {{ end }}
+
+  {{ if isset .Site.Params "mastodon" }}
+  <li><a href="https://{{.Site.Params.mastodon}}">Mastodon</a></li>
+  {{ end }}
+  
   {{ if isset .Site.Params "twitter" }}
   <li><a href="https://twitter.com/{{.Site.Params.twitter}}">Twitter</a></li>
   {{ end }}
@@ -53,10 +61,6 @@
 
   {{ if isset .Site.Params "instagram" }}
   <li><a href="https://www.instagram.com/{{.Site.Params.instagram}}">Instagram</a></li>
-  {{ end }}
-
-  {{ if isset .Site.Params "mastodon" }}
-  <li><a href="https://{{.Site.Params.mastodon}}">Mastodon</a></li>
   {{ end }}
 
   {{ if isset .Site.Params "orcid" }}
