@@ -11,6 +11,11 @@
 {{ partial "math.html" . }}
 {{ end }}
 
+<!-- Load TikzJax, if necessary. -->>
+{{ if or .Params.tikz .IsHome }}
+{{ partial "tikz.html" . }}
+{{ end }}
+  
 </body>
 
 </html>
